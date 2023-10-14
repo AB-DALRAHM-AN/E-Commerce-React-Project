@@ -12,9 +12,7 @@ function Productlist() {
   }, []);
 
   let products = Products.map((product) => {
-    return product.price > 100 ? (
-      <Product key={product.id} product={product} />
-    ) : null;
+    return <Product key={product.id} product={product} />
   });
   return (
     <>

@@ -1,14 +1,23 @@
+import "./styles.css";
+import { Link } from "react-router-dom";
+
 function Product(props) {
+  const { product } = props;
   return (
-    <div className="card">
-      <img src={props.product.image} alt="" />
-      <h2>{props.product.title}</h2>
-      <p>{props.product.description}</p>
-      <p>{props.product.price}</p>
-      <button onClick={() => {
-        console.log("you are going to buy this product that cost", props.product.price)
-      }}>Add to Cart</button>
+    <>
+    <div class="card w-18rem">
+      <img src={product.image} class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{product.title}</h5>
+        <p class="card-text">
+          {product.description}
+        </p>
+        <Link to={`/product/${product.id}`} className="btn btn-primary">
+          View Details
+        </Link>
+      </div>
     </div>
+    </>
   );
 }
 
