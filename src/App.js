@@ -2,7 +2,6 @@ import React from "react";
 import Productlist from "./components/productlist";
 import Navpar from "./components/navpar";
 import Carousel from "./components/caresoul";
-import ProductsList from "./components/productslist";
 import { Routes, Route } from "react-router-dom";
 import About from "./components/about";
 import ProductDetails from "./components/productdetails";
@@ -18,7 +17,6 @@ function App() {
             element={
               <>
                 <Carousel />
-                <ProductsList />
                 <Productlist />
               </>
             }
