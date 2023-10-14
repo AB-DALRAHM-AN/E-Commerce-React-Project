@@ -6,7 +6,7 @@ function ProductsDetails() {
   const productUrl = `https://fakestoreapi.com/products`;
   const [product, setProduct] = useState({});
   const Id = useParams();
-  
+
   useEffect(() => {
     fetch(`${productUrl}/${Id.ProductId}`)
       .then((res) => res.json())
